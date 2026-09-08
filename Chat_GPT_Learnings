@@ -1,0 +1,75 @@
+Email Links ⭐⭐
+You can make a link that opens the user's email application:
+<a href="mailto:someone@example.com">
+    Email Me
+</a>
+The important part is:
+mailto:
+This is different from:
+<a href="https://...">
+because you're specifying an email address rather than a webpage.
+
+
+7. Telephone Links⭐⭐⭐
+You can also create a telephone link:
+<a href="tel:+911234567890">
+    Call Me
+</a>
+On compatible devices, clicking it can open the phone/dialing interface.
+
+
+8.Linking to a Specific Section of the Same Page ⭐⭐⭐
+Suppose you have:
+<h2 id="contact">Contact Us</h2>
+
+
+You can create a link to it:
+<a href="#contact">Go to Contact</a>
+
+
+Notice:
+#contact
+The # means you're referring to an element's ID on the current page.
+So:
+<h2 id="contact">Contact Us</h2>
+and:
+<a href="#contact">Go to Contact</a>
+work together.
+
+
+9. Linking to a Section on Another Page
+You can combine relative URLs and IDs.
+Suppose:
+about.html
+contains:
+
+<h2 id="team">Our Team</h2>
+
+From another page:
+
+<a href="about.html#team">Meet Our Team</a>
+
+The browser:
+Opens about.html
+Finds id="team"
+Jumps to that section.
+
+
+
+
+17. <figure> and <figcaption> ⭐⭐
+
+When an image is a self-contained piece of content that needs a caption, you can use:
+
+<figure>
+    <img src="mountain.jpg" alt="Snow-covered mountain">
+    <figcaption>Mountain landscape</figcaption>
+</figure>
+
+Here:
+
+<figure>       → groups the image/content
+<img>          → image
+<figcaption>   → caption
+
+This is more meaningful than simply putting everything inside a <div>.
