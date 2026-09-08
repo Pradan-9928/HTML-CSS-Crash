@@ -73,3 +73,132 @@ Here:
 <figcaption>   → caption
 
 This is more meaningful than simply putting everything inside a <div>.
+
+    FORMS
+
+Forms are one of the most important HTML topics.
+A form collects information from the user.
+Examples:
+
+Login
+Registration
+Search
+Contact form
+Feedback
+Checkout
+
+Form
+│
+├── Label
+├── Input
+└── Button
+
+    LABELS
+
+A label describes a form control.
+
+<label>Name</label>
+<input type="text">
+
+But there's a better way.
+Connect the label to the input using for and id.
+
+<label for="name">Name:</label>
+<input type="text" id="name">
+
+The relationship is
+label for="name"
+        ↓
+input id="name"
+
+⭐ for should match the input's id.
+This is extremely important for accessibility and usability.
+
+    INPUTS
+
+Input
+│
+├── Type
+├── Placeholder
+└── Name├
+├── Value
+└── Required
+
+
+
+
+<input type="text">
+<input type="password">
+<input type="email">
+<input type="number">
+<input type="date">
+<input type="time">
+<input type="file">
+<input type="checkbox">
+<input type="radio">
+<input type="submit">
+
+Radio Buttons ⭐⭐
+
+Radio buttons are used when the user should select one option from a group.
+
+<input type="radio" name="gender" value="male">
+<label>Male</label>
+
+<input type="radio" name="gender" value="female">
+<label>Female</label>
+
+Why does name matter?
+This is critical.
+Both radio buttons have:
+name="gender"
+Therefore, they belong to the same group.
+Conceptually:
+
+gender
+ ├── male
+ └── female
+
+The browser allows one selection within that group.
+
+Checkbox ⭐⭐⭐
+
+Checkboxes are used when multiple options can be selected.
+
+<input type="checkbox" name="skills" value="java">
+<label>Java</label>
+
+<input type="checkbox" name="skills" value="html">
+<label>HTML</label>
+
+<input type="checkbox" name="skills" value="sql">
+<label>SQL</label>
+
+The user can select:
+
+☑ Java
+☑ HTML
+☐ SQL
+Radio vs checkbox
+Radio     → usually one choice from a group
+Checkbox  → zero, one, or multiple choices
+
+
+<textarea> ⭐⭐⭐
+
+Used for multi-line text.
+
+<label for="message">Message:</label>
+<textarea id="message" name="message"></textarea>
+
+Useful for
+Comments
+Feedback
+Messages
+Descriptions
+
+Unlike:
+
+<input type="text">
+
+which is generally single-line.
