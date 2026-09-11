@@ -199,3 +199,106 @@ Descriptions
 
 Unlike:
 which is generally single-line.
+
+<select> and <option> ⭐⭐⭐
+
+Used to create a dropdown.
+
+<label for="course">Course:</label>
+
+<select id="course" name="course">
+    <option value="java">Java</option>
+    <option value="html">HTML</option>
+    <option value="sql">SQL</option>
+</select>
+
+Conceptually:
+
+Course: [ Java ▼ ]
+
+The <select> is the container.
+
+The <option> represents each choice.
+
+8. selected
+
+You can make an option initially selected:
+
+<select>
+    <option>Java</option>
+    <option selected>HTML</option>
+    <option>SQL</option>
+</select>
+
+HTML will initially show HTML as the selected option.
+
+9. <button> ⭐⭐⭐
+
+Creates a button.
+
+<button>Click Me</button>
+
+Inside a form, you should understand the type attribute:
+
+<button type="submit">Submit</button>
+<button type="reset">Reset</button>
+<button type="button">Click</button>
+The three important types
+submit → submit the form
+reset  → reset form controls
+button → generic button with no automatic form submission
+
+⭐ This is a common source of bugs.
+
+10. <fieldset> and <legend> ⭐⭐⭐
+
+These are especially useful for organizing forms.
+
+<fieldset>
+    <legend>Personal Information</legend>
+
+    <label for="name">Name:</label>
+    <input id="name" type="text">
+
+    <label for="age">Age:</label>
+    <input id="age" type="number">
+</fieldset>
+
+Think:
+
+┌─ Personal Information ──────────┐
+│                                  │
+│ Name: [____________]             │
+│ Age:  [____________]             │
+│                                  │
+└──────────────────────────────────┘
+
+fieldset → groups related controls.
+
+legend → gives that group a caption.
+
+11. The <form> action Attribute ⭐⭐⭐
+
+Now we get to one of the most important concepts.
+
+<form action="/submit">
+
+action specifies where the form data should be sent when the form is submitted.
+
+For example:
+
+<form action="/register">
+    ...
+</form>
+
+Conceptually:
+
+User fills form
+      ↓
+Clicks Submit
+      ↓
+Form data
+      ↓
+/register
+
+The receiving endpoint is normally handled by a server/application.
